@@ -14,10 +14,17 @@ if __name__ == '__main__':
     game.start()
 
     running = True
+    snake_color = (255,255,255) # white
     snake_body = []
+    snake_size = 10
 
     snake_size = 10
-    snake = entity.Snake(screen, color, snake_body)
+    snake = entity.Snake(
+        screen,
+        snake_color,
+        snake_body,
+        snake_size
+        )
 
     while running:
         screen.fill((0,0,0))
