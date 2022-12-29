@@ -17,6 +17,6 @@ class Screen(object):
 		pg.display.set_caption('Snake by INCOMBINER[olepx]')
 
 	def update(self):
-		self.clock.tick(15)
+		self.clock.tick(10)
 		self.listener.handle_keys()
 		pg.display.update()

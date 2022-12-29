@@ -14,6 +14,7 @@ class Direction(Enum):
 	RIGHT = 3
 
 class Snake(object):
+	score      = 0
 	length     = None
 	direction  = None
 	body 	   = None
@@ -28,9 +29,10 @@ class Snake(object):
 		self.respawn()
 
 	def respawn(self):
+		self.score = 0
 		self.length = 3
 		self.body = [(20, 20), (20, 20), (20, 20)]
-		self.direction = Direction.DOWN
+		self.direction = Direction.RIGHT
 
 	def draw(self, game, window):
 		for segment in self.body:
@@ -73,6 +75,7 @@ class Snake(object):
 
 	def eat(self):
 		self.length += 1
+		self.score += 1
 
 	def check_for_food(self, food):
 		head = self.body[-1]
@@ -109,8 +112,8 @@ class Snake(object):
 class Food(object):
 	block_size = None
 	color 	   = (0, 255, 0)
-	x          = 70
-	y          = 70
+	x          = 100
+	y          = 100
 	bounds     = None
 
 	def __init__(self, block_size, bounds):

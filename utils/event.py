@@ -19,11 +19,11 @@ class Listener(object):
 					print("X was pressed. Closing the game!")
 					sys.exit()
 
-				if event.key == pg.K_w:
-					self.key_pressed = pg.K_w
-				if event.key == pg.K_a:
-					self.key_pressed = pg.K_a
-				if event.key == pg.K_s:
-					self.key_pressed = pg.K_s
-				if event.key == pg.K_d:
-					self.key_pressed = pg.K_d
+				if event.key == pg.K_UP:
+					self.key_pressed = pg.K_UP
+				if event.key == pg.K_LEFT:
+					self.key_pressed = pg.K_LEFT
+				if event.key == pg.K_DOWN:
+					self.key_pressed = pg.K_DOWN
+				if event.key == pg.K_RIGHT:
+					self.key_pressed = pg.K_RIGHT
